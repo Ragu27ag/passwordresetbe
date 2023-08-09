@@ -2,8 +2,11 @@ import express from "express";
 import cors from "cors";
 import authRouter from "./Routers/auth.js";
 import { mailer } from "./Mail/mailRouter.js";
+import dotenv from "dotenv";
 
 const app = express();
+
+dotenv.config();
 
 app.use(express.json());
 app.use(cors());
